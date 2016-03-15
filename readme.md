@@ -7,6 +7,6 @@ Although much of this application is self-contained, it is not currently designe
 
 This code is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
-### Contributiong
+### Contributing
 
 Please submit all issues and pull requests to the [promethiamc/web](http://github.com/promethia/web) repository!
