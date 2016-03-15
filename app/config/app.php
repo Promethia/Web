@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => false,
+	'debug' => $_ENV['DEBUG'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => $_ENV['URL'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return array(
 	|
 	*/
 
-	'timezone' => 'UTC',
+	'timezone' => $_ENV['TIMEZONE'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return array(
 	|
 	*/
 
-	'key' => 'ZdaaiNzGJrSwHNasyOQtCmZ06AwEI01K',
+	'key' => $_ENV['KEY'],
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
