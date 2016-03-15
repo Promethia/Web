@@ -1,0 +1,142 @@
+.navbar-fixed-top {
+	padding: 20px 0 20px 0;
+	font-family: 'Cinzel';
+	text-transform: uppercase;
+}
+
+.navbar-collapsed-top {
+	padding: 0px 0 0px 0 !important;
+}
+
+.navbar-brand {
+	font-family: 'Cinzel Decorative';
+	font-weight: 700;
+}
+
+.page-title:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.page-title {
+	padding: 190px 0 90px 0;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	background-size: cover !important;
+	position: relative;
+}
+
+.page-title h1,
+.page-title .description,
+.page-title .lead {
+	text-shadow: 0px 3px 3px rgba(0, 0, 0, 1);
+}
+
+.page-title h1 {
+	font-family: 'Cinzel Decorative';
+	font-size: 48px;
+	font-weight: 700;
+}
+
+.page-title .description {
+	word-spacing: 1px;
+	font-family: 'Cinzel';
+}
+
+.page-title.no-content {
+	padding: 0;
+	margin: 0;
+	height: 90px;
+}
+
+.section {
+	padding: 80px 0 80px 0;
+	line-height: 1.6;
+}
+
+.section-bg:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.section-bg {
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	background-size: cover !important;
+	position: relative;
+}
+
+.footer {
+	padding: 80px 0 80px 0;
+	background-color: #000017;
+	color: #aaaaaa;
+}
+
+.footer a {
+	color: #aaaaaa;
+}
+
+.footer a:hover {
+	color: #ffffff;
+}
+
+.footer hr {
+	border-color: #011D3D;
+}
+
+.footer .list-inline li {
+	position:relative;
+}
+
+.footer .list-inline li + li:before {
+	content: "|";
+	color: #2a2a2a;
+	padding:0 15px 0 0;
+}
+
+.spacer-10,
+.spacer-20,
+.spacer-30,
+.spacer-40,
+.spacer-50,
+.spacer-60,
+.spacer-70,
+.spacer-80,
+.spacer-90{margin:10px 0;border-color:transparent !important;}
+.spacer-10{margin:10px 0;}
+.spacer-20{margin:20px 0;}
+.spacer-30{margin:30px 0;}
+.spacer-40{margin:40px 0;}
+.spacer-50{margin:50px 0;}
+.spacer-60{margin:60px 0;}
+.spacer-70{margin:70px 0;}
+.spacer-80{margin:80px 0;}
+.spacer-90{margin:90px 0;}
+
+.parallax {
+	background-attachment: fixed !important;
+}
+
+.brand-font {
+	font-family: 'Cinzel';
+}
+
+.brand-font-decorative {
+	font-family: 'Cinzel Decorative';
+}
+
+.alt-font {
+	font-family: 'Dancing Script';
+}

@@ -5,3 +5,7 @@ composer.phar
 .env.php
 .DS_Store
 Thumbs.db
+/public/assets/builds
+/public/assets/config
+/public/assets/fonts
+/public/assets/js/wow.js
