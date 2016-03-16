@@ -15,7 +15,18 @@ class CreateNewsComments extends Migration {
 		Schema::create('news_comments', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->integer('member_id')->unsigned();
+			$table->foreign('member_id')->references('id')->on('members');
+			$table->integer('post_id')->unsigned();
+			$table->foreign('post_id')->references('id')->on('news_posts');
+			$table->text('content');
+			$table->enum('status', array(
+				'active',
+				'inactive',
+				'flagged'
+			));
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 

@@ -15,7 +15,20 @@ class CreateForumTopics extends Migration {
 		Schema::create('forum_topics', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->integer('member_id')->unsigned();
+			$table->foreign('member_id')->references('id')->on('members');
+			$table->integer('category_id')->unsigned();
+			$table->foreign('category_id')->references('id')->on('forum_categories');
+			$table->string('title');
+			$table->string('url')->unique();
+			$table->text('content');
+			$table->enum('status', array(
+				'active',
+				'inactive',
+				'flagged'
+			));
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 
