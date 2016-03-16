@@ -19,8 +19,8 @@ class CreateGemTransactions extends Migration {
 			$table->foreign('member_id')->references('id')->on('members');
 			$table->enum('type', array('deposit', 'withdraw'));
 			$table->double('amount', 11, 2);
-			$table->double('balanceFrom', 11, 2);
-			$table->double('balanceTo', 11, 2);
+			$table->double('balance_from', 11, 2);
+			$table->double('balance_to', 11, 2);
 			$table->string('information');
 			$table->timestamps();
 			$table->softDeletes();
