@@ -15,7 +15,14 @@ class CreateHomes extends Migration {
 		Schema::create('homes', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->integer('member_id')->unsigned();
+			$table->foreign('member_id')->references('id')->on('members');
+			$table->string('name');
+			$table->float('x');
+			$table->float('y');
+			$table->float('z');
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 
