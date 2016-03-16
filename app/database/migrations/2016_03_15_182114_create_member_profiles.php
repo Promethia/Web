@@ -15,7 +15,13 @@ class CreateMemberProfiles extends Migration {
 		Schema::create('member_profiles', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->integer('member_id')->unsigned();
+			$table->foreign('member_id')->references('id')->on('members');
+			$table->text('bio')->nullable();
+			$table->string('team_title')->nullable();
+			$table->string('team_image')->nullable();
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 

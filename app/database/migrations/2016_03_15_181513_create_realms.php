@@ -15,7 +15,22 @@ class CreateRealms extends Migration {
 		Schema::create('realms', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('name');
+			$table->string('url')->unique();
+			$table->text('description')->nullable();
+			$table->text('description_short')->nullable();
+			$table->boolean('tagCreative');
+			$table->boolean('tagSurvival');
+			$table->boolean('tagPvp');
+			$table->boolean('tagHome');
+			$table->boolean('tagLots');
+			$table->boolean('tagMaps');
+			$table->enum('status', array(
+				'active',
+				'inactive'
+			));
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 

@@ -15,7 +15,13 @@ class CreateMemberVisits extends Migration {
 		Schema::create('member_visits', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->integer('member_id')->unsigned();
+			$table->foreign('member_id')->references('id')->on('members');
+			$table->string('activateKey');
+			$table->boolean('activateComplete');
+			$table->boolean('whitelistComplete');
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 

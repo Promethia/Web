@@ -15,7 +15,18 @@ class CreateRankBenefits extends Migration {
 		Schema::create('rank_benefits', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('name');
+			$table->enum('type', array(
+				"lots",
+				"vaults",
+				"homes",
+				"days"
+			));
+			$table->string('icon');
+			$table->integer('data')->nullable();
+			$table->string('message');
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 

@@ -15,7 +15,14 @@ class CreateRankTransactions extends Migration {
 		Schema::create('rank_transactions', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->integer('member')->unsigned();
+			$table->foreign('member')->references('id')->on('members');
+			$table->integer('promotes_from')->unsigned();
+			$table->foreign('promotes_from')->references('id')->on('ranks');
+			$table->integer('promotes_to')->unsigned();
+			$table->foreign('promotes_to')->references('id')->on('ranks');
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 
