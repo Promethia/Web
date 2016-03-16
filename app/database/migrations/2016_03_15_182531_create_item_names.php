@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMarketItems extends Migration {
+class CreateItemNames extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,10 +12,14 @@ class CreateMarketItems extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('market_items', function(Blueprint $table)
+		Schema::create('item_names', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->integer('item_id')->unsigned();
+			$table->foreign('item_id')->references('id')->on('items');
+			$table->string('name');
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 
@@ -26,7 +30,7 @@ class CreateMarketItems extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('market_items');
+		Schema::drop('item_names');
 	}
 
 }

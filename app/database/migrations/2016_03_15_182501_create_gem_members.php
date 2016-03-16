@@ -19,6 +19,7 @@ class CreateGemMembers extends Migration {
 			$table->foreign('member_id')->references('id')->on('members');
 			$table->double('balance', 11, 2);
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 

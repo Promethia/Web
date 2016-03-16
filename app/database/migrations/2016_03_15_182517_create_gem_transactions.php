@@ -23,6 +23,7 @@ class CreateGemTransactions extends Migration {
 			$table->double('balanceTo', 11, 2);
 			$table->string('information');
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 
