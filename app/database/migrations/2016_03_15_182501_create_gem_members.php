@@ -15,6 +15,9 @@ class CreateGemMembers extends Migration {
 		Schema::create('gem_members', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->integer('member_id')->unsigned();
+			$table->foreign('member_id')->references('id')->on('members');
+			$table->double('balance', 11, 2);
 			$table->timestamps();
 		});
 	}
