@@ -17,10 +17,14 @@ class CreateRankTransactions extends Migration {
 			$table->increments('id');
 			$table->integer('member_id')->unsigned();
 			$table->foreign('member_id')->references('id')->on('members');
-			$table->integer('promotes_from')->unsigned();
-			$table->foreign('promotes_from')->references('id')->on('ranks');
-			$table->integer('promotes_to')->unsigned();
-			$table->foreign('promotes_to')->references('id')->on('ranks');
+			$table->enum('type', array(
+				'promotion',
+				'demotion'
+			));
+			$table->integer('fromRank_id')->unsigned();
+			$table->foreign('fromRank_id')->references('id')->on('ranks');
+			$table->integer('toRank_id')->unsigned();
+			$table->foreign('toRank_id')->references('id')->on('ranks');
 			$table->timestamps();
 			$table->softDeletes();
 		});

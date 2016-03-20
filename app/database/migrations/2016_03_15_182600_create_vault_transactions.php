@@ -20,12 +20,12 @@ class CreateVaultTransactions extends Migration {
 			$table->integer('vault_id')->unsigned();
 			$table->foreign('vault_id')->references('id')->on('vaults');
 			$table->integer('slot');
-			$table->integer('item_from')->unsigned();
-			$table->foreign('item_from')->references('id')->on('items');
-			$table->integer('item_to')->unsigned();
-			$table->foreign('item_to')->references('id')->on('items');
-			$table->integer('amount_from');
-			$table->integer('amount_to');
+			$table->integer('fromItem_id')->unsigned();
+			$table->foreign('fromItem_id')->references('id')->on('items');
+			$table->integer('toItem_id')->unsigned();
+			$table->foreign('toItem_id')->references('id')->on('items');
+			$table->integer('fromStock');
+			$table->integer('toStock');
 			$table->timestamps();
 			$table->softDeletes();
 		});

@@ -19,7 +19,7 @@ class CreateRanks extends Migration {
 			$table->string('url')->unique();
 			$table->integer('level');
 			$table->text('description')->nullable();
-			$table->text('description_short')->nullable();
+			$table->text('descriptionShort')->nullable();
 			$table->string('hex');
 			$table->string('format');
 			$table->enum('status',
@@ -27,10 +27,10 @@ class CreateRanks extends Migration {
 				'active',
 				'inactive'
 			));
-			$table->integer('promotes_to')->unsigned()->nullable();
-			$table->foreign('promotes_to')->references('id')->on('ranks');
-			$table->integer('demotes_to')->unsigned()->nullable();
-			$table->foreign('demotes_to')->references('id')->on('ranks');
+			$table->integer('promotesToRank_id')->unsigned()->nullable();
+			$table->foreign('promotesToRank_id')->references('id')->on('ranks');
+			$table->integer('demotesToRank_id')->unsigned()->nullable();
+			$table->foreign('demotesToRank_id')->references('id')->on('ranks');
 			$table->timestamps();
 			$table->softDeletes();
 		});

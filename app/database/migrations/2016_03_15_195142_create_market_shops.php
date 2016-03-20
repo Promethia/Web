@@ -15,7 +15,15 @@ class CreateMarketShops extends Migration {
 		Schema::create('market_shops', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('name');
+			$table->enum('type', array(
+				'trades',
+				'custom',
+				'hybrid',
+				'closed'
+			));
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 

@@ -105,4 +105,4 @@ php composer.phar dump-autoload
 
 ### Contributing
 
-Please submit all issues and pull requests to the [promethiamc/web](http://github.com/promethia/web) repository!
+Please submit all issues and pull requests to the [Promethia/Web](http://github.com/promethia/web) repository!

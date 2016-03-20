@@ -21,7 +21,7 @@ class CreateMembers extends Migration {
 			$table->string('password');
 			$table->integer('rank_id')->unsigned();
 			$table->foreign('rank_id')->references('id')->on('ranks');
-			$table->dateTime('rank_since');
+			$table->dateTime('rankSince');
 			$table->enum('status', array(
 				'visitor',
 				'active',

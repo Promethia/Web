@@ -18,7 +18,7 @@ class CreateNewsCategories extends Migration {
 			$table->string('name');
 			$table->string('url')->unique();
 			$table->text('description')->nullable();
-			$table->text('description_short')->nullable();
+			$table->text('descriptionShort')->nullable();
 			$table->enum('status', array(
 				'active',
 				'inactive'

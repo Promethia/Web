@@ -18,7 +18,7 @@ class CreateRealms extends Migration {
 			$table->string('name');
 			$table->string('url')->unique();
 			$table->text('description')->nullable();
-			$table->text('description_short')->nullable();
+			$table->text('descriptionShort')->nullable();
 			$table->boolean('tagCreative');
 			$table->boolean('tagSurvival');
 			$table->boolean('tagPvp');

@@ -18,8 +18,8 @@ class CreateMemberProfiles extends Migration {
 			$table->integer('member_id')->unsigned();
 			$table->foreign('member_id')->references('id')->on('members');
 			$table->text('bio')->nullable();
-			$table->string('team_title')->nullable();
-			$table->string('team_image')->nullable();
+			$table->string('teamTitle')->nullable();
+			$table->string('teamImage')->nullable();
 			$table->timestamps();
 			$table->softDeletes();
 		});

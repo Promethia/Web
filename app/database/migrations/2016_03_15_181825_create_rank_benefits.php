@@ -26,7 +26,7 @@ class CreateRankBenefits extends Migration {
 			));
 			$table->string('icon');
 			$table->integer('data')->nullable();
-			$table->string('message');
+			$table->string('caption');
 			$table->timestamps();
 			$table->softDeletes();
 		});

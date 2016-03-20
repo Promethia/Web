@@ -15,7 +15,21 @@ class CreateLots extends Migration {
 		Schema::create('lots', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('name')->unique();
+			$table->string('displayName');
+			$table->integer('member_id')->unsigned()->nullable;
+			$table->foreign('member_id')->references('id')->on('members');
+			$table->integer('realm_id')->unsigned();
+			$table->foreign('realm_id')->references('id')->on('realms');
+			$table->enum('status', array(
+				'active',
+				'inactive',
+				'occupied',
+				'reset',
+				'locked'
+			));
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 
