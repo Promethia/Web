@@ -23,6 +23,7 @@ Notice, changes to these files will be overwritten during updates.
 A fix to this is expected later.
 
 + **[Mailgun](http://www.mailgun.com/)** - A service used to dispatch user emails, account required (Free).
++ **[Minify](https://github.com/ceesvanegmond/minify)** - Included in installation, minimizes CSS and JavaScript files.
 
 #### Frontend
 
@@ -101,6 +102,12 @@ php artisan up
 Try this command.
 ```
 php composer.phar dump-autoload
+```
+
+**Errors with class optimization?**
+Try this command before optimizing.
+```
+php artisan clear-compiled
 ```
 
 ### Contributing
