@@ -3,8 +3,9 @@
 	<hr></hr>
 	<li><a href="#"><i class="fa fa-heartbeat fa-fw"></i> Heartbeat</a></li>
 	<li><a href="#"><i class="fa fa-tasks fa-fw"></i> Logs</a></li>
-	<li><a href="#"><i class="fa fa-bug fa-fw"></i> Issues</a></li>
+	<li><a href="#"><i class="fa fa-lightbulb-o fa-fw"></i> Ideas</a></li>
 	<li><a href="#"><i class="fa fa-ticket fa-fw"></i> Tickets</a></li>
+	<li><a href="#"><i class="fa fa-bug fa-fw"></i> Issues</a></li>
 	<li><a href="#"><i class="fa fa-envelope fa-fw"></i> Messages</a></li>
 	<hr></hr>
 	<li><a href="#"><i class="fa fa-users fa-fw"></i> Members</a></li>
