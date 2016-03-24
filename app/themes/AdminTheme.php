@@ -10,6 +10,20 @@ class AdminTheme extends BaseTheme {
 		}
 	}
 
+	public function pageStylesheets() {
+		$base = array(
+			'/assets/css/bootstrap.min.css',
+			'/assets/css/icons.css',
+			'/assets/css/animate.css',
+			'/assets/css/promethia.css',
+			'/assets/css/admin.css',
+		);
+
+		$stylesheets = array_merge($base, $this->stylesheets);
+
+		return $stylesheets;
+	}
+
 	public function pageScripts() {
 		$base = array(
 			'/assets/js/modernizr-custom.min.js',

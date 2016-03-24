@@ -6,7 +6,7 @@
 			</button>
 			{{ link_to('/', 'Promethia', array('class' => 'navbar-brand')) }}
 			<button type="button" class="navbar-toggle pull-left" data-toggle="offcanvas">
-				<span class="fa fa-ellipsis-v"></span>
+				<span class="fa fa-list-ul"></span>
 			</button>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
