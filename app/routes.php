@@ -13,5 +13,5 @@
 
 Route::get('/', function()
 {
-	return View::make('layout.base');
+	return View::make('admin.layout.base');
 });
